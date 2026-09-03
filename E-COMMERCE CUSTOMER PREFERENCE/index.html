@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Customer Preference Predictor</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background: #f4f6f9; color: #212529; }
+        .page { max-width: 1000px; margin: 30px auto; padding: 0 15px; }
+        .header { background: linear-gradient(135deg, #2b5876, #4e4376); color: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .header h1 { margin: 0 0 10px; font-size: 28px; }
+        .header p { margin: 0; opacity: 0.9; }
+        .card { background: white; border-radius: 12px; padding: 25px; margin-top: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .form-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+        .field { display: flex; flex-direction: column; }
+        .field.full { grid-column: 1 / -1; }
+        label { font-weight: 600; margin-bottom: 6px; font-size: 14px; }
+        input, select, textarea { padding: 10px; border: 1px solid #ced4da; border-radius: 6px; font-size: 14px; }
+        textarea { resize: vertical; height: 90px; }
+        button { margin-top: 15px; width: 100%; padding: 12px; border: none; border-radius: 6px; background: #4e4376; color: white; font-size: 16px; font-weight: bold; cursor: pointer; }
+        button:hover { background: #3b3358; }
+        .result-box { margin-top: 20px; padding: 20px; border-radius: 8px; display: none; }
+        .result-box.rec { background: #e8f5e9; border-left: 5px solid #2e7d32; color: #1b5e20; }
+        .result-box.not-rec { background: #ffebee; border-left: 5px solid #c62828; color: #b71c1c; }
+        .res-title { font-size: 20px; font-weight: bold; margin-bottom: 5px; }
+        .res-conf { font-size: 15px; }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <h1>Phân tích sở thích & Dự đoán đề xuất sản phẩm</h1>
+            <p>Ứng dụng Machine Learning đa phương thức (Văn bản đánh giá + Thông tin khách hàng)</p>
+        </div>
+
+        <div class="card">
+            <form id="predictForm">
+                <div class="form-grid">
+                    <div class="field">
+                        <label>Độ tuổi (Age)</label>
+                        <input type="number" id="age" value="34" required>
+                    </div>
+                    <div class="field">
+                        <label>Số sao đánh giá (Rating: 1-5)</label>
+                        <select id="rating">
+                            <option value="5">5 sao</option>
+                            <option value="4">4 sao</option>
+                            <option value="3">3 sao</option>
+                            <option value="2">2 sao</option>
+                            <option value="1">1 sao</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Lượt phản hồi tích cực</label>
+                        <input type="number" id="pos_feedback" value="0">
+                    </div>
+                    <div class="field">
+                        <label>Ngành hàng (Department)</label>
+                        <select id="dept_name">
+                            <option value="Tops">Tops</option>
+                            <option value="Dresses">Dresses</option>
+                            <option value="Bottoms">Bottoms</option>
+                            <option value="Intimate">Intimate</option>
+                            <option value="Jackets">Jackets</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Phân loại (Division)</label>
+                        <input type="text" id="div_name" value="General">
+                    </div>
+                    <div class="field">
+                        <label>Nhóm áo quần (Class)</label>
+                        <input type="text" id="class_name" value="Dresses">
+                    </div>
+                    <div class="field full">
+                        <label>Nội dung đánh giá của khách hàng (Review Text)</label>
+                        <textarea id="review_text" placeholder="Nhập nội dung nhận xét bằng Tiếng Anh...">I absolutely love this dress! The material is high quality and fits true to size. Highly recommended!</textarea>
+                    </div>
+                </div>
+                <button type="submit">Phân tích & Dự đoán</button>
+            </form>
+
+            <div id="result" class="result-box">
+                <div id="resTitle" class="res-title"></div>
+                <div id="resConf" class="res-conf"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('predictForm');
+        const result = document.getElementById('result');
+        const resTitle = document.getElementById('resTitle');
+        const resConf = document.getElementById('resConf');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const payload = {
+                Age: Number(document.getElementById('age').value),
+                Rating: Number(document.getElementById('rating').value),
+                Positive_Feedback_Count: Number(document.getElementById('pos_feedback').value),
+                Department_Name: document.getElementById('dept_name').value,
+                Division_Name: document.getElementById('div_name').value,
+                Class_Name: document.getElementById('class_name').value,
+                Review_Text: document.getElementById('review_text').value
+            };
+
+            try {
+                const res = await fetch('/ecommerce/v1/predict', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.error || 'Lỗi xử lý API');
+
+                result.style.display = 'block';
+                if (data.prediction === 1) {
+                    result.className = 'result-box rec';
+                    resTitle.textContent = 'Khách hàng SẼ ĐỀ XUẤT sản phẩm này (Recommended)';
+                } else {
+                    result.className = 'result-box not-rec';
+                    resTitle.textContent = 'Khách hàng KHÔNG ĐỀ XUẤT sản phẩm này (Not Recommended)';
+                }
+                resConf.textContent = 'Độ tin cậy của mô hình: ' + data.confidence + '%';
+            } catch (err) {
+                alert('Lỗi: ' + err.message);
+            }
+        });
+    </script>
+</body>
+</html>
