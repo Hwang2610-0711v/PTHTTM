@@ -1,0 +1,23 @@
+# Core
+python-dotenv
+pandas
+numpy
+networkx
+matplotlib
+
+# RAG Stack
+langchain
+langchain-community
+langchain-google-genai
+chromadb
+sentence-transformers
+pypdf
+
+# Web & API
+streamlit
+fastapi
+uvicorn
+pydantic
+
+# Finance data
+yfinance

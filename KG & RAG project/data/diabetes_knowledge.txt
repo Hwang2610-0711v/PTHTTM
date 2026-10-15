@@ -1,0 +1,49 @@
+BỆNH TIỂU ĐƯỜNG - KIẾN THỨC Y KHOA
+
+1. ĐỊNH NGHĨA
+Bệnh tiểu đường (đái tháo đường) là một bệnh rối loạn chuyển hóa mạn tính, đặc trưng bởi nồng độ glucose trong máu tăng cao do cơ thể không sản xuất đủ insulin hoặc không sử dụng insulin hiệu quả.
+
+2. CÁC CHỈ SỐ CHẨN ĐOÁN
+- Glucose (đường huyết đói): Bình thường < 100 mg/dL. Tiền tiểu đường: 100-125 mg/dL. Tiểu đường: >= 126 mg/dL.
+- BMI (chỉ số khối cơ thể): Bình thường 18.5-24.9. Thừa cân 25-29.9. Béo phì >= 30.
+- Huyết áp (BloodPressure): Bình thường < 80 mmHg (tâm trương).
+- Insulin: Hormone do tuyến tụy tiết ra để điều hòa đường huyết.
+- DiabetesPedigreeFunction: Chỉ số di truyền, đánh giá tiền sử gia đình.
+- Age (tuổi): Nguy cơ tăng theo tuổi, đặc biệt sau 45.
+- SkinThickness (độ dày da): Chỉ số liên quan đến lượng mỡ dưới da.
+- Pregnancies (số lần mang thai): Tiền sử mang thai nhiều làm tăng nguy cơ.
+
+3. YẾU TỐ NGUY CƠ
+- Tiền sử gia đình có người mắc tiểu đường.
+- Thừa cân, béo phì (BMI >= 25).
+- Ít vận động thể chất.
+- Tăng huyết áp.
+- Phụ nữ có tiền sử tiểu đường thai kỳ.
+- Tuổi trên 45.
+
+4. BIẾN CHỨNG
+- Tim mạch: Nhồi máu cơ tim, đột quỵ.
+- Thận: Suy thận mạn tính.
+- Mắt: Võng mạc tiểu đường, có thể dẫn đến mù lòa.
+- Thần kinh: Tê bì chân tay, loét bàn chân.
+- Nhiễm trùng: Vết thương lâu lành.
+
+5. ĐIỀU TRỊ
+- Thay đổi lối sống: Chế độ ăn ít đường, tập thể dục 30 phút/ngày.
+- Thuốc uống: Metformin, Sulfonylurea.
+- Insulin: Tiêm cho bệnh nhân type 1 hoặc type 2 nặng.
+- Theo dõi đường huyết định kỳ.
+
+6. PHÒNG NGỪA
+- Duy trì cân nặng hợp lý.
+- Ăn nhiều rau xanh, giảm đồ ngọt.
+- Tập thể dục đều đặn.
+- Khám sức khỏe định kỳ, đặc biệt sau 40 tuổi.
+- Kiểm soát huyết áp và cholesterol.
+
+7. LIÊN HỆ CHỈ SỐ VÀ NGUY CƠ
+- Glucose >= 126 mg/dL: Nguy cơ cao mắc tiểu đường.
+- BMI >= 30: Nguy cơ béo phì dẫn đến kháng insulin.
+- Age >= 45: Nguy cơ tăng đáng kể.
+- DiabetesPedigreeFunction > 0.5: Có yếu tố di truyền mạnh.
+- Số lần mang thai (Pregnancies) >= 6: Nguy cơ tăng.

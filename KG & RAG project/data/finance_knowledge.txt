@@ -1,0 +1,36 @@
+THỊ TRƯỜNG TÀI CHÍNH - VÀNG VÀ CHỨNG KHOÁN
+
+1. VÀNG (GOLD)
+- Vàng là tài sản trú ẩn an toàn (safe-haven asset) trong thời kỳ bất ổn kinh tế.
+- Giá vàng chịu ảnh hưởng bởi: lạm phát, lãi suất Fed, tỷ giá USD, căng thẳng địa chính trị.
+- Khi lạm phát tăng cao, nhà đầu tư thường chuyển sang vàng để bảo toàn giá trị.
+- Khi Fed tăng lãi suất, giá vàng thường giảm do chi phí cơ hội tăng.
+- Vàng và USD có tương quan nghịch: USD mạnh → vàng yếu.
+- Giá vàng thế giới thường được niêm yết bằng USD/ounce.
+
+2. CHỨNG KHOÁN (STOCKS)
+- Cổ phiếu là chứng chỉ xác nhận quyền sở hữu một phần công ty.
+- Chỉ số VN-Index đại diện cho sàn HOSE.
+- Chỉ số S&P 500 đại diện cho 500 công ty lớn nhất Hoa Kỳ.
+- Giá cổ phiếu chịu ảnh hưởng bởi: lợi nhuận doanh nghiệp, lãi suất, tăng trưởng GDP, tâm lý thị trường.
+- P/E ratio (Price-to-Earnings): Chỉ số định giá, P/E cao → kỳ vọng tăng trưởng cao.
+- Cổ tức (Dividend): Phần lợi nhuận chia cho cổ đông.
+
+3. CÁC YẾU TỐ VĨ MÔ ẢNH HƯỞNG
+- Lãi suất Fed: Tăng lãi suất → chứng khoán giảm, USD tăng, vàng giảm.
+- Lạm phát (CPI): Lạm phát cao → vàng tăng, trái phiếu giảm.
+- GDP: Tăng trưởng GDP cao → chứng khoán tăng.
+- Tỷ lệ thất nghiệp: Thấp → kinh tế khỏe mạnh → chứng khoán tăng.
+- Giá dầu: Tăng → chi phí sản xuất tăng → ảnh hưởng tiêu cực đến nhiều ngành.
+
+4. CHIẾN LƯỢC ĐẦU TƯ
+- Đầu tư dài hạn: Mua và nắm giữ cổ phiếu bluechip, vàng vật chất.
+- Đầu tư ngắn hạn: Lướt sóng, trading theo tin tức.
+- Đa dạng hóa: Kết hợp cổ phiếu, vàng, trái phiếu để giảm rủi ro.
+- Dollar-cost averaging (DCA): Mua đều đặn để trung bình giá.
+
+5. RỦI RO
+- Rủi ro thị trường: Giá biến động mạnh.
+- Rủi ro thanh khoản: Khó bán khi cần.
+- Rủi ro lạm phát: Đồng tiền mất giá.
+- Rủi ro chính trị: Chiến tranh, bất ổn.
